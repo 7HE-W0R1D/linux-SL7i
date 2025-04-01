@@ -298,8 +298,12 @@ static const struct software_node *ssam_node_group_sl7[] = {
 	&ssam_node_bat_ac,
 	&ssam_node_bat_main,
 	&ssam_node_tmp_perf_profile_with_fan,
+	&ssam_node_tmp_sensors,
 	&ssam_node_fan_speed,
 	&ssam_node_hid_sam_keyboard,
+	&ssam_node_hid_main_iid5,
+	&ssam_node_hid_sam_sensors,
+	&ssam_node_hid_sam_ucm_ucsi,
 	/* TODO: evaluate thermal sensors devices when we get a driver for that */
 	NULL,
 };
@@ -433,6 +437,9 @@ static const struct acpi_device_id ssam_platform_hub_acpi_match[] = {
 	/* Surface Pro 11 */
 	{ "MSHW0583", (unsigned long)ssam_node_group_sp9 },
 
+        /* Surface Pro 11 */
+        { "MSHW0583", (unsigned long)ssam_node_group_sp9 },
+
 	/* Surface Book 2 */
 	{ "MSHW0107", (unsigned long)ssam_node_group_gen5 },
 
@@ -459,6 +466,9 @@ static const struct acpi_device_id ssam_platform_hub_acpi_match[] = {
 
 	/* Surface Laptop 6 */
 	{ "MSHW0530", (unsigned long)ssam_node_group_sl6 },
+
+	/* Surface Laptop 6 */
+	{ "MSHW0551", (unsigned long)ssam_node_group_sl7 },
 
 	/* Surface Laptop Go 1 */
 	{ "MSHW0118", (unsigned long)ssam_node_group_slg1 },
